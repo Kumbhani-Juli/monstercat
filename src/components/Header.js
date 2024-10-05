@@ -131,7 +131,7 @@ const Sidebar = () => {
 								to="/artists"
 								style={{ color: "white", textDecoration: "none" }}
 							>
-								<li>Artists</li>
+								<li onClick={() => setIsMenuOpen(false)}>Artists</li>
 							</Link>
 							<li>
 								<span>About</span>
@@ -142,30 +142,35 @@ const Sidebar = () => {
 									<ul className="submenu">
 										<Link
 											to="/aboutmonstercat"
+											onClick={() => setIsMenuOpen(false)}
 											style={{ color: "white", textDecoration: "none" }}
 										>
 											<li>About Monstercat</li>
 										</Link>
 										<Link
 											to="/diversity"
+											onClick={() => setIsMenuOpen(false)}
 											style={{ color: "white", textDecoration: "none" }}
 										>
 											<li>Diversity & Inclusion</li>
 										</Link>
 										<Link
 											to="/ethics"
+											onClick={() => setIsMenuOpen(false)}
 											style={{ color: "white", textDecoration: "none" }}
 										>
 											<li>Code of Ethics</li>
 										</Link>
 										<Link
 											to="/environment"
+											onClick={() => setIsMenuOpen(false)}
 											style={{ color: "white", textDecoration: "none" }}
 										>
 											<li>Environmental</li>
 										</Link>
 										<Link
 											to="/contact"
+											onClick={() => setIsMenuOpen(false)}
 											style={{ color: "white", textDecoration: "none" }}
 										>
 											<li>Contact Us</li>
@@ -230,7 +235,14 @@ const Sidebar = () => {
 								{" "}
 								<li>Press</li>
 							</Link>
-							<li>Shop</li>
+							<Link
+								to="/shop"
+								onClick={() => setIsMenuOpen(false)}
+								style={{ color: "white", textDecoration: "none" }}
+							>
+								{" "}
+								<li>Shop</li>
+							</Link>
 							<Link
 								to="/lostcivilaization"
 								onClick={() => setIsMenuOpen(false)}

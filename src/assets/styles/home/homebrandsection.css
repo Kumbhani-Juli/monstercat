@@ -308,6 +308,11 @@ body {
     width: 350px;
   }
 
+  .video-wrapper {
+    position: relative;
+
+  }
+
   .video_inside_img {
     height: 50px;
     position: absolute;
