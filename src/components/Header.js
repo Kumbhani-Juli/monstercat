@@ -152,14 +152,36 @@ const Sidebar = () => {
 										>
 											<li>Diversity & Inclusion</li>
 										</Link>
-										<li>Code of Ethics</li>
-										<li>Environmental</li>
-										<li>Contact Us</li>
-										<li>Careers</li>
+										<Link
+											to="/ethics"
+											style={{ color: "white", textDecoration: "none" }}
+										>
+											<li>Code of Ethics</li>
+										</Link>
+										<Link
+											to="/environment"
+											style={{ color: "white", textDecoration: "none" }}
+										>
+											<li>Environmental</li>
+										</Link>
+										<Link
+											to="/contact"
+											style={{ color: "white", textDecoration: "none" }}
+										>
+											<li>Contact Us</li>
+										</Link>
 									</ul>
 								)}
 							</li>
-
+							<li>
+								<Link
+									to="/news"
+									onClick={() => setIsMenuOpen(false)}
+									style={{ color: "white", textDecoration: "none" }}
+								>
+									News
+								</Link>
+							</li>
 							<li>
 								<span>Events</span>
 								<button onClick={() => toggleSubmenu("events")}>
@@ -167,38 +189,55 @@ const Sidebar = () => {
 								</button>
 								{activeSubmenu === "events" && (
 									<ul className="submenu">
-										<li>Monstercat Events Experience</li>
-										<li>Upcoming Events</li>
+										<Link
+											to="/events"
+											onClick={() => setIsMenuOpen(false)}
+											style={{ color: "white", textDecoration: "none" }}
+										>
+											<li>Monstercat Events Experience</li>
+										</Link>{" "}
+										<Link
+											to="/upcomming-events"
+											onClick={() => setIsMenuOpen(false)}
+											style={{ color: "white", textDecoration: "none" }}
+										>
+											<li>Upcoming Events</li>
+										</Link>{" "}
 									</ul>
 								)}
 							</li>
-
-							<li>
-								<span>Programming</span>
-								<button onClick={() => toggleSubmenu("programming")}>
-									{activeSubmenu === "programming" ? (
-										<FaAngleUp />
-									) : (
-										<FaAngleDown />
-									)}
-								</button>
-								{activeSubmenu === "programming" && (
-									<ul className="submenu">
-										<li>MonstercatTV</li>
-										<li>Call of the Wild</li>
-										<li>Silk Showcase</li>
-										<li>Upcoming Shows</li>
-									</ul>
-								)}
-							</li>
-
 							{/* Additional Menu Items */}
-							<li>Gold</li>
-							<li>Partners</li>
-							<li>Press</li>
-							<li>Player</li>
+							<Link
+								to="/gold"
+								onClick={() => setIsMenuOpen(false)}
+								style={{ color: "white", textDecoration: "none" }}
+							>
+								<li>Gold</li>
+							</Link>
+							<Link
+								to="/partnership"
+								onClick={() => setIsMenuOpen(false)}
+								style={{ color: "white", textDecoration: "none" }}
+							>
+								{" "}
+								<li>Partners</li>
+							</Link>
+							<Link
+								to="/press"
+								onClick={() => setIsMenuOpen(false)}
+								style={{ color: "white", textDecoration: "none" }}
+							>
+								{" "}
+								<li>Press</li>
+							</Link>
 							<li>Shop</li>
-							<li>Lost Civilization</li>
+							<Link
+								to="/lostcivilaization"
+								onClick={() => setIsMenuOpen(false)}
+								style={{ color: "white", textDecoration: "none" }}
+							>
+								<li>Lost Civilization</li>
+							</Link>
 						</ul>
 
 						{/* Social Media Icons */}

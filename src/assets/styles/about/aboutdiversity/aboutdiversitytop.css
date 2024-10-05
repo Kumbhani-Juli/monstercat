@@ -33,10 +33,14 @@
   margin-left: 5rem;
 }
 
+.diversity-container h2,
 .diversity-content p,
 .diversity-content ul,
 .diversity-content li {
   color: white !important;
+  position: relative;
+  /* Ensure elements are above the overlay */
+  z-index: 2;
   /* Applies white color to paragraphs, lists, and list items */
 }
 
